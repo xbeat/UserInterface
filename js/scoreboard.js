@@ -57,6 +57,22 @@ function manageScoreboard(){
 	document.getElementsByClassName( "scoreboardTimer" )[ 0 ].classList.toggle( "scoreboardTimerHide" );
 };
 
+
+function displayBgGame(){	
+	document.getElementsByTagName( "body" )[0].style.background = "url(img/big.jpg)";
+    document.getElementsByTagName( "body" )[0].style.backgroundRepeat = "no-repeat";
+    document.getElementsByTagName( "body" )[0].style.backgroundPosition = "center center";
+    document.getElementsByTagName( "body" )[0].style.backgroundSize = "100% 100%";
+};
+
+function displayBgData(){	
+	document.getElementsByTagName( "body" )[0].style.background = "url(img/stadiums-33.jpg)";
+    document.getElementsByTagName( "body" )[0].style.backgroundRepeat = "no-repeat";
+    document.getElementsByTagName( "body" )[0].style.backgroundPosition = "center center";
+    document.getElementsByTagName( "body" )[0].style.backgroundSize = "100% 100%";
+};
+
+
 function manageStatistics(){
 	document.getElementsByClassName( "centerStat" )[ 0 ].classList.toggle( "centerStatShow" );
 	document.getElementsByClassName( "scoreBoardBigContainer" )[ 0 ].classList.toggle( "scoreBoardBigContainerUp" );

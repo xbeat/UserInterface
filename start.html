@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Interface xbe.at 1.0.1</title>
-	<link rel="stylesheet" href="css/dashboard.css">
+	<link rel="stylesheet" href="css/userinterface.css">
 	<link rel="stylesheet" href="css/gauge.css" />
 	<link rel="stylesheet" href="css/bar.css" />
 	<link rel="stylesheet" href="css/timeline.css" />
@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="css/menu.css" />
 	<link rel="stylesheet" href="css/scoreboard.css">
     <link rel="stylesheet" href="css/skill.css">
+    <link rel="stylesheet" href="css/sidemenu.css">
 
 	<script type="text/javascript" src="js/gauge.js"></script>
 	<script type="text/javascript" src="js/bar.js"></script>
@@ -25,6 +26,82 @@
 	<div class="xbeat-logo-wrapper">
 		<img class="xbeat-logo-up" src="../img/LogoBeat.svg" title="logo">
 	</div>
+
+	<!-- SIDE MENU ( will remain?? ) -->
+	<div class="nav-toggle open hamburger">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+	
+	<div class="menu-container nav-open">
+	  <nav>
+	    <div>
+	      <div class="title">
+	        <h5>xbe.at</h5>
+	      </div>
+	    </div>
+
+	    <!-- Control -->
+	    <div class="sideMenuButtonContainer">
+	    	<a class="btn"><button onClick="timer.start()" class="sideMenuButton"><p class="sideMenuElement">Start Timer</p></button></a>
+	    </div>
+
+	    <div class="sideMenuButtonContainer">
+			<a class="btn"><button onClick="timer.stop()" class="sideMenuButton"><p class="sideMenuElement">Stop Timer</p></button></a>
+	    </div>
+
+	    <div class="sideMenuButtonContainer">
+			<a class="btn"><button onClick="timer.reset()" class="sideMenuButton"><p class="sideMenuElement">Reset Timer</p></button></a>
+	    </div>
+
+	    <div class="sideMenuButtonContainer">
+			<a class="btn"><button onClick="manageBigScoreboard()" class="sideMenuButton"><p class="sideMenuElement">toggle Big Scoreboard</p></button></a>
+	    </div>
+
+	    <div class="sideMenuButtonContainer">
+			<a class="btn"><button onClick="manageScoreboard()" class="sideMenuButton"><p class="sideMenuElement">toggle Scoreboard</p></button></a>
+	    </div>
+
+	    <div class="sideMenuButtonContainer">
+			<a class="btn"><button onClick="managePlayerInfo()" class="sideMenuButton"><p class="sideMenuElement">toggle Player Info</p></button></a>
+	    </div>
+
+	    <div class="sideMenuButtonContainer">
+			<a class="btn"><button onClick="manageStatistics()" class="sideMenuButton"><p class="sideMenuElement">toggle Statistics</p></button></a>
+	    </div>
+
+	    <div class="sideMenuButtonContainer">
+			<a class="btn"><button onClick="managePitch()" class="sideMenuButton"><p class="sideMenuElement">toggle Pitch</p></button></a>
+	    </div>	    	    	    	    	    
+
+	    <div class="sideMenuButtonContainer">
+			<a class="btn"><button onClick="displayBgGame()" class="sideMenuButton"><p class="sideMenuElement">Background Game</p></button></a>
+	    </div>
+
+	    <div class="sideMenuButtonContainer">
+			<a class="btn"><button onClick="displayBgData()" class="sideMenuButton"><p class="sideMenuElement">Background Data </p></button></a>
+	    </div>	    	    	    	    	    
+
+
+	    <div class="sideMenuButtonContainer">
+			<a class="btn"><button class="sideMenuButton"><p class="sideMenuElement">Stop RAF</p></button></a>
+	    </div>
+
+	    <div class="sideMenuButtonContainer">
+			<a class="btn"><button class="sideMenuButton"><p class="sideMenuElement">Close Joystick</p></button></a>
+	    </div>	    
+
+	  </nav>
+	</div>	
+
+    <script>
+		document.querySelector('.nav-toggle').addEventListener( "click", function( e ){
+			e.currentTarget.classList.toggle('open');
+			document.querySelector('.menu-container').classList.toggle('nav-open');
+		});
+	</script>   
+
 
 	<!-- MAIN MENU -->
 	<div id="wrapperMain" class="wrapperMain">
@@ -81,7 +158,7 @@
 				</div>
 			</div>
 
-			<div class="table" >
+			<div class="table">
 				<div class="head">PLAYER DETAIL</div>
 
 				<div class="playerDetail">
@@ -103,14 +180,14 @@
 						<li>Red Card (Other Clubs/Your Club)</li>
 						<li>0 (0/0)</li>
 					</ul>
-				</div>s
+				</div>
 			</div>			  
 		</div>
 
 	</div>
 
 	<!-- ----------- -->
-	<!-- Player Details -->
+	<!-- Player Statistics -->
 	<div class="content" id="playerStatistics">
 
 		<div class="titleHead">PLAYER STATISTICS</div>
@@ -527,7 +604,7 @@
 	*	SCOREBOARD 
 	*  =============
 	*/
- <!-- Game Stat -->
+	 <!-- Game Stat -->
     <div class="centerStat">
         <div class="centerstatRow">
             <div class="leftStat">1</div>
@@ -741,18 +818,6 @@
             </div>
             <div class="rightPartBottom">VILLARREAL CF</div>
         </div>
-    </div>
-
-    <!-- Control -->
-    <div class="control">
-        <button onClick="timer.start()">Start Timer</button> 
-        <button onClick="timer.stop()">Stop Timer</button> 
-        <button onClick="timer.reset()">Reset Timer</button>
-        <button onClick="manageBigScoreboard()">toggle Big Scoreboard</button>
-        <button onClick="manageScoreboard()">toggle Scoreboard</button>
-        <button onClick="managePlayerInfo()">toggle Player Info</button>
-        <button onClick="manageStatistics()">toggle Statistics</button>
-        <button onClick="managePitch()">toggle Pitch</button>
     </div>
 
     <script type="text/javascript" src="js/Pitch.js"></script>
