@@ -54,8 +54,8 @@ nav {
   left: 15px;
   top: 20px;
   width: 500px;
-  z-index: 1000;
   cursor: pointer;
+  z-index: 35;
 }
 
 .nav-toggle.hamburger {
@@ -100,7 +100,7 @@ nav {
   margin-bottom: 10px;
   border: 2px solid #ababab;
   color: #ababab;
-  height:30px;
+  height:40px;
 }
 
 .sideMenuButton:hover {

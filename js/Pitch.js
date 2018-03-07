@@ -1,17 +1,19 @@
 class Pitch{
 
     constructor(){
-        //http://www.fifa.com/img/worldfootball/lotg/law1/Law1_Page13_01.jpg
         let canvasPitch = document.createElement( "canvas" );
         document.body.appendChild( canvasPitch );
         canvasPitch.style.position = "fixed";
         canvasPitch.style.bottom = "10px";
         canvasPitch.style.left = "50%";
         canvasPitch.style.margin = "0 auto";
-        canvasPitch.style.zIndex = "0";
-        canvasPitch.id = "canvasPitch";
+        canvasPitch.style.zIndex = "-97";
         canvasPitch.style.transform = "translate( -50%, 0 )";
-        canvasPitch.style.backgroundColor = "#009900";
+        canvasPitch.style.zIndex = "-100";
+        canvasPitch.id = "canvasPitch";
+
+        //canvasPitch.style.transform = "translate( -50%, 0 )";
+        canvasPitch.style.backgroundColor = "#009900";    
         canvasPitch.width = 460;
         canvasPitch.height = 290;
 
@@ -28,12 +30,12 @@ class Pitch{
 
         //Center
         contextPitch.beginPath();
-        contextPitch.arc( 192 * ratio + offsetY, 112.5 * ratio + offsetY, 30 * ratio, 0, 2 * Math.PI, false ); //big circle
-        contextPitch.moveTo( 192 * ratio + offsetY, 0 * ratio + offsetY );
-        contextPitch.lineTo( 192 * ratio + offsetY, 225 * ratio + offsetY );//center line
+        contextPitch.arc( 183 * ratio + offsetY, 112.5 * ratio + offsetY, 30 * ratio, 0, 2 * Math.PI, false ); //big circle
+        contextPitch.moveTo( 183 * ratio + offsetY, 0 * ratio + offsetY );
+        contextPitch.lineTo( 183 * ratio + offsetY, 225 * ratio + offsetY );//center line
         contextPitch.stroke();
         contextPitch.beginPath();
-        contextPitch.arc( 192 * ratio + offsetY, 112.5 * ratio + offsetY, 1 * ratio, 0, 2 * Math.PI, false ); //small circle
+        contextPitch.arc( 183 * ratio + offsetY, 112.5 * ratio + offsetY, 1 * ratio, 0, 2 * Math.PI, false ); //small circle
         contextPitch.stroke();
 
         //Big area
