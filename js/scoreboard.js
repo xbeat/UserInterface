@@ -210,10 +210,12 @@ class Skill{
 				};
 
 				document.getElementById( "skill-change-value-container" ).style.opacity = 1;
+				document.getElementById( "skill-change-value-container" ).style.zIndex = 30;
 
 				var outoClose = setInterval( function(){ 
 					if ( this.updating == false ){
 						document.getElementById( "skill-change-value-container" ).style.opacity = 0;
+						document.getElementById( "skill-change-value-container" ).style.zIndex = 0;
 						clearInterval( outoClose );
 						this.skillOpen = false;
 					} else {
