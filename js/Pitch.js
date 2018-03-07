@@ -11,12 +11,12 @@ class Pitch{
         canvasPitch.style.zIndex = "0";
         canvasPitch.id = "canvasPitch";
         canvasPitch.style.transform = "translate( -50%, 0 )";
-        canvasPitch.style.backgroundColor = "#009900";    
-        canvasPitch.width = 600;
-        canvasPitch.height = 380;
+        canvasPitch.style.backgroundColor = "#009900";
+        canvasPitch.width = 460;
+        canvasPitch.height = 290;
 
         let contextPitch = canvasPitch.getContext('2d');
-        let ratio = 1.5;
+        let ratio = 1.15;
         let offsetY = 20;
 
         //Pitch
