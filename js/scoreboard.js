@@ -59,12 +59,12 @@ function manageScoreboard(){
 
 
 function displayBgGame(){	
-	document.getElementsByTagName( "body" )[0].style.background = "url('img/big.png') no-repeat fixed top left / cover";
+	document.getElementsByTagName( "body" )[0].style.background = "url('img/big.jpg') no-repeat fixed top left / cover";
     document.getElementsByTagName( "body" )[0].style.zIndex = "-1";
 };
 
 function displayBgData(){	
-	document.getElementsByTagName( "body" )[0].style.background = "url('img/stadiums-33.png') no-repeat fixed top left / cover";
+	document.getElementsByTagName( "body" )[0].style.background = "url('img/stadiums-33.jpg') no-repeat fixed top left / cover";
     document.getElementsByTagName( "body" )[0].style.zIndex = "-1";
 };
 
