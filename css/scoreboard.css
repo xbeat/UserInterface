@@ -229,7 +229,7 @@
     background-color: blue;
 }
 
-.scoreTeamA{
+#scoreTeamA{
     position: absolute;
     padding-top: 10px;
     left: 320px;
@@ -242,7 +242,7 @@
     font-size: 35px;
 }
 
-.scoreTeamB{
+#scoreTeamB{
     position: absolute;
     padding-top: 10px;
     left: 390px;
