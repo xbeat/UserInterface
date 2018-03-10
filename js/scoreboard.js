@@ -57,7 +57,6 @@ function manageScoreboard(){
 	document.getElementsByClassName( "scoreboardTimer" )[ 0 ].classList.toggle( "scoreboardTimerHide" );
 };
 
-
 function displayBgGame(){	
 	document.getElementsByTagName( "body" )[0].style.background = "url('img/big.jpg') no-repeat fixed top left / cover";
     document.getElementsByTagName( "body" )[0].style.zIndex = "-1";
@@ -99,12 +98,13 @@ for( let i = 0, il = selects.length; i < il; i++ ){
 /*
 * Timer
 */
-class Timer{
+class ScoreboardTimer{
 	constructor( callback ) {
 		this.time = 5400;
 		this.status = 0;
 		this.timer_id;
 		this.callback = callback;
+		this.reset();
 	};
 
 	start() {
@@ -148,19 +148,15 @@ class Timer{
 	};
 }
 
-var timer;
 
-document.addEventListener('DOMContentLoaded', function() {
-	timer = new Timer(
-		function( time ) {
-			if( time <= 0 ) { 
-				timer.stop();
-				alert('time out');
-			};
-		}
-	);
-	timer.reset();
-});
+let	scoreboardTimer = new ScoreboardTimer(
+	function( time ) {
+		if( time <= 0 ) { 
+			timer.stop();
+			alert('time out');
+		};
+	}
+);
 
 /*
 * Change skill value

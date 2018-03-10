@@ -65,6 +65,10 @@
     padding: 0px 10px 0px 0px;
 }
 
+/*
+*  Player Info
+*/
+
 .playerInfo {
     position: absolute;
     bottom: 150px;
@@ -159,6 +163,9 @@
     right: 180px;  
 }
 
+/*
+*  Timer
+*/
 .scoreboardTimer {
     position: absolute;
     top: 35px;
@@ -285,6 +292,9 @@
     background-color: white;
 }
 
+/*
+* Scoreboard Big Container
+*/
 .scoreBoardBigContainer{
     position: absolute;
     margin: auto;
@@ -413,6 +423,10 @@
     left: 150px;
 }
 
+/*
+* Hide / Show Pitch
+*/
 .canvasPitch{
     visibility: hidden;
 }
+
